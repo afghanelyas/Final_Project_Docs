@@ -4,12 +4,12 @@ return [
     /**
      * The book title.
      */
-    'title' => 'Laravel Queues in Action',
+    'title' => 'API School Documentation',
 
     /**
      * The author name.
      */
-    'author' => 'Mohamed Said',
+    'author' => 'Elyas Afghan',
 
     /**
      * The list of fonts to be used in the different themes.
@@ -24,8 +24,8 @@ return [
      */
     'document' => [
         'format' => [210, 297],
-        'margin_left' => 27,
-        'margin_right' => 27,
+        'margin_left' => 20,
+        'margin_right' => 20,
         'margin_bottom' => 14,
         'margin_top' => 14,
     ],
@@ -64,6 +64,5 @@ return [
     /**
      * A notice printed at the final page of a generated sample.
      */
-    'sample_notice' => 'This is a sample from "Laravel Queues in Action" by Mohamed Said. <br>
-                        For more information, <a href="https://www.learn-laravel-queues.com/">Click here</a>.',
+    'sample_notice' => '',
 ];
