@@ -37,11 +37,7 @@ Make school administration easier.
 
 
 ### Expected Outcomes
-
-An efficient data management system.
-Improved educational quality.
-Empowered students.
-Streamlined administration processes.
+An API based platform being integratable with existing school management systems, useable for both private and public school without having a complete SMIS. 
 
 
 
