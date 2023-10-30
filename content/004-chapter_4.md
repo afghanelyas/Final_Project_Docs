@@ -69,4 +69,4 @@ PostgreSQL, often referred to as Postgres, is a powerful, open-source relational
 7.Research and Academia: It is often used in academic and research environments for data analysis and research databases.
 
 ### Functionality Of Application
-#### login page
+
