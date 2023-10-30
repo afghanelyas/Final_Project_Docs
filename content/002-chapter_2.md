@@ -50,6 +50,7 @@ time to benefits relative to classic waterfall processes. I. Increase the qual-
 ity of the deliverables II. Provide better estimates while spending less time
 creating them III. Be more in control of the project schedule and state. The
 catalog Books form.
+![Agile 1](content/Agile.png)
 
 
 ### Requirement Engineering
@@ -144,7 +145,18 @@ ple relational database implementation, each row of a table represents one
 8instance of an entity type, and each field in a table represents an attribute
 type. In a relational database a relationship between entities is implemented
 by storing the primary key of one entity as a pointer or foreign key in the
-table of another entity. This system have these entities ** need to describe our own prject entity ** , ** requierd the EER Model Diagram **
+table of another entity. This system have these entities : Player: In this
+entity we will have the admin (project manager), developer which all the
+information about the user will be save in this table. Project: It is all about
+the project that all the information will be saved here. Story Points: All
+story points that exist in one project will be saved here. Hr Resource: In the
+hr resource we have all the developer and any other people who will work
+in the project. Hr Category: Hr Resource have categories that all categories
+will be saves here. User Story Precedence : In this entity the precedence
+that will be given to a user story will be saved here. Point: All the number
+that will be given to the story point will be saved in these project.[5][Keular
+Navas, 1989]
+![EER 2](content/EER.png)
 
 ### EER Model Diagram
 The EER model includes all of the concepts introduced by the ER model.
@@ -152,7 +164,6 @@ Additionally it includes the concepts of a subclass and superclass (Is-a),
 along with the concepts of specialization and generalization. Furthermore, it
 introduces the concept of a union type or category, which is used to represent
 a collection of objects that is the union of objects of different entity types.
-** figure EER Model Diagram **
 
 ### Use Case Diagram
 A use case diagram at its simplest is a representation of a users interaction
