@@ -99,21 +99,15 @@ defines a function of a system or its component. A function is described as
 a set of inputs, the behavior, and outputs. Functional requirements may be
 calculations, technical details, data manipulation and processing and other
 specific functionality that define what a system is supposed to accomplish.
-Player Can create account in the system. User can create project and manage
-projects that belongs to him/her. Project manager can create user stories
-of the specific project. Project manager create the user stories. Player vote
-for the each user story. The system calculate the average of the story point
-which belong to the each user story.
+Remove unnecessary packages form Laravel Project. Application Authentication(Registeration, login, logout). Implement the activity log package for the all API request. setupe the Posgress SQL in local. Create the Postman collectin. Block user account after unusual logins. User verification. User porfile.
+Create class. Create subject seeder. Attach subjects to class seeder and factory. Add the class to education. Score seeder. Student seeder. Class seeder and factory. Subject seeder. location agent. disable the disposable emails. Custom subject. Education year. Validate the student attendance according the education year data.generate result sheet. Generate Excel of result (package or tool). Pupulate the result form students. Generate ordinatry number bassed on the calss. Generate ordinary number based on the class. Make the dynamic the result sheet (پارچه).
 
 ### Non-functional Requirements of our project
 Non-functional requirements of this system cover all the remaining require-
 ments which are not covered by the functional requirements[4]. They specify
 criteria that judge the operation of this system, rather than specific be-
 haviours, like: When user logged in, if again users accessing his/her account
-don’t need to login again. Non-functional requirements are: Performance
-Scalability Capacity Availability Reliability Maintainability Manageability
-Usability Interoperability As said above, non-functional requirements spec-
-ify the systems quality characteristics or quality attributes.
+don’t need to login again. Non-functional requirements are: Configure the rutes files to merchant and API. Setup the sentry for error reporting. Localize the validation message and properties. User profile middleware. User suspension middleware. Class subject middleware.
 
 ### System Modeling
 System modeling is the process of developing abstract models of a system,
@@ -156,7 +150,7 @@ will be saves here. User Story Precedence : In this entity the precedence
 that will be given to a user story will be saved here. Point: All the number
 that will be given to the story point will be saved in these project.[5][Keular
 Navas, 1989]
-![EER 2](content/EER.png)
+![EER 2](content/Erdiagram.png)
 
 ### EER Model Diagram
 The EER model includes all of the concepts introduced by the ER model.
