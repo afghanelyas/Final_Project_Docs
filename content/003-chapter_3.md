@@ -49,11 +49,10 @@ Data Exchange: APIs let apps share all sorts of stuff - words, numbers, pictures
 * Response: When it's done, the API sends you a message. This message contains the answers to your request or the information you wanted.
 * Integration: Now, your own program can use this information from the API to do its own job or show the data to people. It's like using the results of a task done by your assistant to complete your work.
 
-### Authentication
+## Authentication
 >{notice} To be updated.
 
-### Class API
-
+## Class API
 **View**
 To get list of all classes of authenticated users.
 ```php
@@ -331,7 +330,7 @@ It return the deleted risk.
 
 
 
-**Student API**
+## Student API
 This section contains the endpoints related to managing student information.
 
 **Index**
@@ -440,7 +439,7 @@ Reaponse
 No content
 ```
 
-**Subject API**
+## Subject API
 This documentation provides an overview of the API endpoints and actions for managing subjects within the API system.
 
 **Index**
@@ -523,11 +522,8 @@ Response
 No Content
 ```
 
-**Attendance**
+## Attendance API
 This documentation provides an overview of the API endpoints and resources available for managing attendance data in a school management system.
-
-*Store*
-*Update*
 
 **Store**
 Create a new attendance record for a student.
