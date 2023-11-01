@@ -53,10 +53,6 @@ Data Exchange: APIs let apps share all sorts of stuff - words, numbers, pictures
 >{notice} To be updated.
 
 ### Class API
-*View*
-*Store*
-*Update*
-*Delete*
 
 **View**
 To get list of all classes of authenticated users.
@@ -100,8 +96,8 @@ To get the list of project issues via pagination
 ```php
 GET api/projects/{projectId}/paginated-issues
 ```
-The success response would looks like:
 
+The success response would looks like:
 ```php
 {
     "data": [
@@ -333,230 +329,10 @@ It return the deleted risk.
 }
 ```
 
-**Drop Down Values**
-To get the drop down values such as impact area, time to notify and source :
 
-```php
-GET /ap/issues/dropdowns
-```
-The success response would look like:
-
-```php
-{
-    "impactAreas": [
-        {
-            "value": "1",
-            "displayValue": "Schedule"
-        },
-        {
-            "value": "2",
-            "displayValue": "Scope"
-        },
-        {
-            "value": "3",
-            "displayValue": "Budget"
-        },
-        {
-            "value": "4",
-            "displayValue": "Quality"
-        }
-    ],
-    "status": [
-        {
-            "value": "1",
-            "displayValue": "Open"
-        },
-        {
-            "value": "2",
-            "displayValue": "Resolved"
-        },
-        {
-            "value": "3",
-            "displayValue": "Retired"
-        }
-    ],
-    "priority": [
-        {
-            "value": "1",
-            "displayValue": "Low"
-        },
-        {
-            "value": "2",
-            "displayValue": "Normal"
-        },
-        {
-            "value": "3",
-            "displayValue": "High"
-        }
-    ]
-}
-```
-
-Review
-To review and update the status and other staff of issues {riskId}:
-
-POST api/projects/{projectId}/issues/{id}/review
-
-The required data and validations are same as store method.
-
-The success response looks like:
-
-{
-    "data": [
-        {
-            "id": 9,
-            "title": "Title",
-            "description": "Some comment are here.",
-            "suggestion": "Some suggestions are here.",
-            "impactArea": "Schedule",
-            "impactAreaId": 1,
-            "status": "Opened",
-            "statusId": 1,
-            "priorityId": 2,
-            "priority": "Normal",
-            "timeToSolve": 21,
-            "notifyDate": "1398-03-30",
-            "occurrenceDate": "1398-03-30",
-            "openDate": "1398-03-30",
-            "resolvedDate": "",
-            "retiredDate": "",
-            "resolvedNote": null,
-            "retiredNote": null,
-            "subtaskId": null,
-            "subtaskName": null,
-            "projectId": 240,
-            "userId": 1,
-            "user": "Admin",
-            "attachments": [],
-            "wasRisk": 0,
-            "createdAt": "1398-03-30",
-            "type": "issue"
-        }
-    ]
-}
-
-
-**Filter**
-To filter the risks for the project {projectId}
-
-```php
-POST api/projects/{projectId}/issues/filter
-```
-
-The action post data should looks like:
-
-```php
-[
-    {
-        column: "Id"
-        id: "698"
-        operator: "="
-        readValue: "202"
-        value: "202"
-    },
-    ...
-]
-```
-
-The above query will returns the project's {projectId} issues which id is 202.
-
-To filter action data does accept multiple filter:
-
-```php
-[
-    {
-        column: "Status"
-        id: "557"
-        operator: "="
-        readValue: "Open"
-        value: "1"
-    },
-    {
-        column: "Id"
-        id: "761"
-        operator: "="
-        readValue: "202"
-        value: "202"
-    },
-    ...
-]
-```
-
-Now the filter action will return the risks which their status is open and the id is 202.
-
-To know the values available for property column of payload property:
-
-```php
-GET api/issues/columns
-```
-
-It return the columns that can be filtered by
-```php
-[
-    "Id",
-    "Impact Area",
-    "Status",
-    "Responsible Person"
-]
-```
-
-The operation property of payload can be the following
-```php
-'='     // To check the equality
-'like'  // To check the like query
-'!='    // To check the not equality
-'>'     // To check the grather than
-'<'     // To check the less than
-'>='    // To check the grather than or equal to
-'<='    // To check the less than or equal to
-```
-
-finally the response of filter looks like:
-
-```php
-{
-    "data": [
-        {
-            "id": 9,
-            "title": "Title",
-            "description": "Some comment are here.",
-            "suggestion": "Some suggestions are here.",
-            "impactArea": "Schedule",
-            "impactAreaId": 1,
-            "status": "Opened",
-            "statusId": 1,
-            "priorityId": 2,
-            "priority": "Normal",
-            "timeToSolve": 21,
-            "notifyDate": "1398-03-30",
-            "occurrenceDate": "1398-03-30",
-            "openDate": "1398-03-30",
-            "resolvedDate": "",
-            "retiredDate": "",
-            "resolvedNote": null,
-            "retiredNote": null,
-            "subtaskId": null,
-            "subtaskName": null,
-            "projectId": 240,
-            "userId": 1,
-            "user": "Admin",
-            "attachments": [],
-            "wasRisk": 0,
-            "createdAt": "1398-03-30",
-            "type": "issue"
-        }
-    ]
-}
-```
 
 **Student API**
 This section contains the endpoints related to managing student information.
-
-*Index*
-*Show*
-*Store*
-*Update*
-*Delete*
 
 **Index**
 Retrieve a list of students in a specific class.
@@ -666,10 +442,6 @@ No content
 
 **Subject API**
 This documentation provides an overview of the API endpoints and actions for managing subjects within the API system.
-
-*Index*
-*Store*
-*Delete*
 
 **Index**
 This endpoint allows you to retrieve the subjects associated with a specific class.
