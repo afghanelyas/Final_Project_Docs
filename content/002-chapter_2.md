@@ -171,7 +171,7 @@ Actor Info: Name: User Description: All the company and other people
 which want ot estimate their projects. system: Actor Info: Name:System
 Description The system that will calculate the story points and summarize
 the story points.
-** fiqure User Case Diagram ** 
+![UserCase 1](content/lastUseCase.png)
 
 ### Activity Diagram
 Activity diagrams are graphical representations of workflows of stepwise ac-
