@@ -90,102 +90,6 @@ The success response looks like:
     ]
 }
 ```
-To get the list of project issues via pagination
-
-```php
-GET api/projects/{projectId}/paginated-issues
-```
-
-The success response would looks like:
-```php
-{
-    "data": [
-        {
-            "id": 9,
-            "title": "Title",
-            "description": "Some comment are here.",
-            "suggestion": "Some suggestions are here.",
-            "impactArea": "Schedule",
-            "impactAreaId": 1,
-            "status": "Opened",
-            "statusId": 1,
-            "priorityId": 2,
-            "priority": "Normal",
-            "timeToSolve": 21,
-            "notifyDate": "1398-03-30",
-            "occurrenceDate": "1398-03-30",
-            "openDate": "1398-03-30",
-            "resolvedDate": "",
-            "retiredDate": "",
-            "resolvedNote": null,
-            "retiredNote": null,
-            "subtaskId": null,
-            "subtaskName": null,
-            "projectId": 240,
-            "userId": 1,
-            "user": "Admin",
-            "attachments": [],
-            "wasRisk": 0,
-            "createdAt": "1398-03-30",
-            "type": "issue"
-        }
-    ],
-    "meta": {
-        "pagination": {
-            "total": 1,
-            "count": 1,
-            "per_page": 6,
-            "current_page": 1,
-            "total_pages": 1,
-            "links": []
-        }
-    }
-}
-```
-
-To get all issues:
-```php
-GET api/issues
-```
-
-It returns the risks stored in system.
-
-```php
-{
-    "data": [
-        {
-            "id": 9,
-            "title": "Title",
-            "description": "Some comment are here.",
-            "suggestion": "Some suggestions are here.",
-            "impactArea": "Schedule",
-            "impactAreaId": 1,
-            "status": "Opened",
-            "statusId": 1,
-            "priorityId": 2,
-            "priority": "Normal",
-            "timeToSolve": 21,
-            "notifyDate": "1398-03-30",
-            "occurrenceDate": "1398-03-30",
-            "openDate": "1398-03-30",
-            "resolvedDate": "",
-            "retiredDate": "",
-            "resolvedNote": null,
-            "retiredNote": null,
-            "subtaskId": null,
-            "subtaskName": null,
-            "projectId": 240,
-            "userId": 1,
-            "user": "Admin",
-            "attachments": [],
-            "wasRisk": 0,
-            "createdAt": "1398-03-30",
-            "type": "issue"
-        },
-        ...
-    ]
-}
-```
 
 **Store**
 
@@ -351,16 +255,8 @@ The success response looks like:
         "name": "John Doe",
         "father_name": "James Doe",
         "grand_father_name": "Robert Doe",
-        "nid_number": 123456789,
-        "base_number": STU123456
-    },
-    {
-        "id": 2,
-        "name": "Jane Smith",
-        "father_name": "David Smith",
-        "grand_father_name": "Michael Smith",
-        "nid_number": 987654321,
-        "base_number": STU987654
+        "nid_number": "123456789",
+        "base_number": 123456789
     },
 ...
  
@@ -382,8 +278,8 @@ Response:
     "name": "Jane Smith",
     "father_name": "David Smith",
     "grand_father_name": "Michael Smith",
-    "nid_number": 987654321,
-    "base_number": STU987654
+    "nid_number": "987654321",
+    "base_number": 123456789
 }
 ```
 
