@@ -194,3 +194,9 @@ state diagrams, in UML 2.x, the activity diagrams were renormalized to be
 based on Petri net-like semantics, increasing the scope of situations that can
 be modeled using activity diagrams.[7] These changes cause many UML 1.x
 activity diagrams to be interpreted differently in UML 2.x [2].
+
+### Create project activity diagram
+Create project diagram describe the process of creating project that all the
+other participant will vote for that project user stories.
+
+![ProjectActivity 1](content/ProjectActivity.png)
