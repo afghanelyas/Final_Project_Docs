@@ -28,14 +28,6 @@ How can we create a system that makes it easy and efficient for Afghan schools t
 
 The issue of poorly managed student result data in Afghan schools has a bad effect. It makes education less effective, school administration slower, and can even affect how well students do in their studies. This problem is holding back the modernization of the education system and could cause bigger problems for the economy and society.
 
-### Research Goals
-
-Create a system that's good at managing data.
-Make education better.
-Help students feel more confident.
-Make school administration easier.
-
-
 ### Expected Outcomes
 An API based platform being integratable with existing school management systems, useable for both private and public school without having a complete SMIS. 
 
