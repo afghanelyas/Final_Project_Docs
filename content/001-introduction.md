@@ -26,7 +26,7 @@ How can we create a system that makes it easy and efficient for Afghan schools t
 
 ### Impact of the Problem
 
-The issue of poorly managed student result data in Afghan schools has a bad effect. It makes education less effective, school administration slower, and can even affect how well students do in their studies. This problem is holding back the modernization of the education system and could cause bigger problems for the economy and society.
+Public schools must address their manual and inefficient handling of results because they cannot afford to implement a comprehensive School Management Information System (SMIS) for efficient school management. The samne is true for private schools as well. The teachers has to enter the same data each educational term.
 
 ### Expected Outcomes
 An API based platform being integratable with existing school management systems, useable for both private and public school without having a complete SMIS. 
