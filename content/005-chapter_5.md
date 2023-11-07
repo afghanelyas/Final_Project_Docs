@@ -68,5 +68,27 @@ PostgreSQL, often referred to as Postgres, is a powerful, open-source relational
 6.Enterprise Applications: PostgreSQL is used in various enterprise-level applications for data storage and management.
 7.Research and Academia: It is often used in academic and research environments for data analysis and research databases.
 
-### Functionality Of Application
+### Postman
+Postman is a handy tool for working with web APIs. It helps developers send and receive data from these APIs easily.
 
+**Key Features:**
+* User-Friendly Interface: Postman has a user-friendly interface for making requests to APIs.
+* Collections: You can group and manage related requests together.
+* Environment Variables: It lets you set different settings for your requests.
+* Automation: You can automate testing and workflows.
+* Testing: Postman helps you check API responses.
+
+**How to Use Postman:**
+* Download and Install: Get Postman on your computer; it works on Windows, macOS, and Linux.
+* Create Requests: Make requests (like getting data or sending data) by specifying the API and parameters.
+* Organize Requests: Keep things neat by grouping related requests.
+* Send Requests: Send your requests and see the responses, usually in a format like JSON.
+* Test and Automate: You can create tests and automate workflows.
+
+**Use Cases:**
+* API Testing: It's used to check if APIs work correctly.
+* API Development: Developers use it to design and test APIs.
+* API Documentation: Postman can generate easy-to-read documentation for your APIs.
+
+**Versions:**
+There's a free version and a paid one with extra features for collaboration.
