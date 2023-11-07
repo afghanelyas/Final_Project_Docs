@@ -1,18 +1,31 @@
 
 # API
-An API, or Application Programming Interface, is like a set of rules that helps different software applications have a conversation. It tells them how to ask for things and share information.
-Key Parts of an API:
-Methods or Endpoints: Think of these as actions. They tell the apps what to do, like getting data, sending data, or doing a specific task.
-Request Format: When you talk to an API, you make a request. This is like telling it what you want to do. You might also give it your ID to prove who you are.
-Response Format: The API answers back with information or says, "Yep, I did it!" The answer comes in a specific way, like a language the apps understand, such as JSON or XML.
-Data Exchange: APIs let apps share all sorts of stuff - words, numbers, pictures, files, or anything they need to talk about. It's like the way they pass notes to each other.
+Sabaq.af is a platform designed to provide users with educational resources and services. To make the most of what Sabaq.af has to offer, users are required to follow a specific process, including user registration, identity verification, profile creation, and the use of API tokens in their interactions with the platform. This document outlines the steps a user needs to take to access the features and content provided by Sabaq.af.
 
-### How dose API work
-* Request: You start by asking the API to do something for you. You tell it what you want, and sometimes, you give it extra information.
-* Processing: The API gets to work, like a helpful assistant. It might search for information, do some calculations, or talk to other services.
-* Response: When it's done, the API sends you a message. This message contains the answers to your request or the information you wanted.
-* Integration: Now, your own program can use this information from the API to do its own job or show the data to people. It's like using the results of a task done by your assistant to complete your work.
+**I. User Registration:**
 
+Access the Website: Visit https://www.sabaq.af.
+Sign Up: Click "Sign Up" and provide:
+Username
+Email address
+Password
+Submit Registration: Click "Submit" to create your Sabaq.af account.
+
+**II. Identity Verification:**
+
+Verification Email: After registration, check your email for a verification message from Sabaq.af.
+Verify Your Email: Click the link in the email to activate your account for security.
+
+**III. Navigating to Your Profile:**
+
+Log In: Return to the website, log in using your username and password.
+Access Your Profile: Click your username or profile picture in the top-right corner.
+
+**IV. Creating and Using API Tokens:**
+
+Generate API Token: On your profile page, create a unique API token.
+Copy the Token: Copy the generated token to your clipboard.
+Attach Token to Requests: When using Sabaq.af's API, attach the token according to the API documentation for authentication.
 ## Authentication
 >{notice} To be updated.
 
