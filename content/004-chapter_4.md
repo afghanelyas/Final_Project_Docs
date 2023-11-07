@@ -1,72 +1,446 @@
-# Implementation
-Using Laravel API and Postman for testing is a common and effective choice for implementing and testing APIs. 
 
-### Technologies
-When we want to develop any software choosing programming language is
-very critical and important and it play the key role in software, so decid-
-ing that uses from which programming language is a little deep subject[8].
-There are a number of reasons that whey choosing technology is important:
-Time to Code in a project the time is one the important things because after
-considering all problem of system the system should complete in specified
-durations so time that coding of a system take is very important for project
-because if the coding of system take a lot of time the project well not finish
-in project schedule. Execution Speed it is also a good reason to choosing the
-right technology the system we want develop in which technology will exe-
-cution efficiently Code Maintenance Choosing the right technology from the
-standpoint of code maintenance is critical, considering to which technology
-code maintenances is easy is important because every we can maintenances
-our code the coding become easy. I chooses PHP language especially (Lar-
-avel) framework and MYSQLI database in my project, below is the reason
-why I chooses this technologies in my project. The Laravel framework is
-MVC(model-view-controller) The Laravel frame- work has lots of class li-
-brary so it make easy the coding and prevent from lots of time and let the
-developer to focus more on system. we worked with this framework a lot and
-working with this framework is easy for me and I had more experience with
-this framework.
+# API
+An API, or Application Programming Interface, is like a set of rules that helps different software applications have a conversation. It tells them how to ask for things and share information.
+Key Parts of an API:
+Methods or Endpoints: Think of these as actions. They tell the apps what to do, like getting data, sending data, or doing a specific task.
+Request Format: When you talk to an API, you make a request. This is like telling it what you want to do. You might also give it your ID to prove who you are.
+Response Format: The API answers back with information or says, "Yep, I did it!" The answer comes in a specific way, like a language the apps understand, such as JSON or XML.
+Data Exchange: APIs let apps share all sorts of stuff - words, numbers, pictures, files, or anything they need to talk about. It's like the way they pass notes to each other.
 
-### Model-View-Controller:
-One positive point of Laravel framework is the MVC architecture because
-this architecture is very easy to use and clear. The logic is in controller,
-the presentation or clearly the HTML code that used to show data to end
-user is in view, the database interaction is in model so adding new feature is
-possible at any time because for adding new feature the developer just add
-new controllers, new views and new models[9]
+### How dose API work
+* Request: You start by asking the API to do something for you. You tell it what you want, and sometimes, you give it extra information.
+* Processing: The API gets to work, like a helpful assistant. It might search for information, do some calculations, or talk to other services.
+* Response: When it's done, the API sends you a message. This message contains the answers to your request or the information you wanted.
+* Integration: Now, your own program can use this information from the API to do its own job or show the data to people. It's like using the results of a task done by your assistant to complete your work.
 
-### Laravel
-The most important reason that we chooses Laravel framework is this reason,
-this framework has any kind of class library so the developer don’t need to
-code a lot. Laravel is a free, open-source PHP web framework, created by
-Taylor Otwell and intended for the development of web applications following
-the modelviewcontroller (MVC) architectural pattern. Some of the features
-of Laravel are a modular packaging system with a dedicated dependency
-manager, different ways for accessing relational databases, utilities that aid
-in application deployment and maintenance, and its orientation toward syn-
-tactic sugar[10]. As of March 2015, Laravel is regarded as one of the most
-popular PHP frameworks, together with Symfony, Zend, CodeIgniter, Yii2
-and others. Laravel is a web application framework with expressive, elegant
-syntax. We believe development must be an enjoyable, creative experience
-to be truly fulfilling. Laravel attempts to take the pain out of develop-
-ment by easing common tasks used in the majority of web projects, such
-as authentication, routing, sessions, and caching. Laravel aims to make the
-development process a pleasing one for the developer without sacrificing ap-
-plication functionality. Happy developers make the best code. To this end,
-we’ve attempted to combine the very best of what we have seen in other web
-frameworks, including frameworks implemented in other languages, such as
-Ruby on Rails, ASP.NET MVC, and Sinatra.
-Laravel is accessible, yet powerful, providing powerful tools needed for
-large, robust applications. A superb inversion of control container, expressive
-migration system, and tightly integrated unit testing support give you the
-tools you need to build any application with which you are tasked.
+## Authentication
+>{notice} To be updated.
 
-### PostgreSQL
-PostgreSQL, often referred to as Postgres, is a powerful, open-source relational database management system (RDBMS) known for its robust features, extensibility, and performance. It is a popular choice for a wide range of applications, from small personal projects to large enterprise-level databases. Here's some detailed information about PostgreSQL:
-1.Web Applications: Many web applications and content management systems use PostgreSQL for data storage.
-2.Geospatial Applications: PostgreSQL's support for geospatial data makes it suitable for GIS applications.
-3.Data Warehousing: It can be used for data warehousing and analytics.
-4.Financial Systems: PostgreSQL's ACID compliance makes it a good fit for financial applications.
-5.Content Management Systems (CMS): Several popular CMS platforms, like Drupal and WordPress, support PostgreSQL as a database backend.
-6.Enterprise Applications: PostgreSQL is used in various enterprise-level applications for data storage and management.
-7.Research and Academia: It is often used in academic and research environments for data analysis and research databases.
+## Class API
+**View**
+To get list of all classes of authenticated users.
+```php
+GET /classes
+```
 
-### Functionality Of Application
+The success response looks like:
 
+```php
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "Class Name",
+            "grade": 8,
+            "student_count": 0,
+            "year": {
+                "name": 1402
+            },
+            "school": {
+                "name": "School Name"
+            },
+            "subjects": [
+                {
+                    "name": "Subject Name",
+                    "en_name": "Subject english name",
+                    "pa_name": "Subject Pushto name",
+                    "customSubject": false
+                },
+                ...
+            ]
+ 
+        },
+        ...
+    ]
+}
+```
+
+**Store**
+
+To create a new issue for project {projectId}:
+```php
+POST api/projects/{projectId}/issues
+```
+
+The above action requires the following data that should be included.
+
+```php
+'title'          => 'required|string|max:255|min:3',
+'description'    => 'string|max:255',
+'suggestion'     => 'required|string|max:255',
+'occurrenceDate' => 'required_if:subtaskId,==,""',
+'subtaskId'      => 'required_if:occurrenceDate,==,""|numeric',
+'priority'       => 'required|numeric',
+'timeToSolve'    => 'required|numeric',
+'userId'         => 'required|numeric',
+'attachments'    => 'nullable'
+```
+
+The success response would looks like:
+```php
+{
+        "data": [
+            {
+                "id": 10,
+                "title": "New Isue",
+                "description": "Some comment are here.",
+                "suggestion": "Some suggestions are here.",
+                "impactArea": "Schedule",
+                "impactAreaId": 1,
+                "status": "Opened",
+                "statusId": 1,
+                "priorityId": 2,
+                "priority": "Normal",
+                "timeToSolve": 21,
+                "notifyDate": "1398-03-30",
+                "occurrenceDate": "1398-03-30",
+                "openDate": "1398-03-30",
+                "resolvedDate": "",
+                "retiredDate": "",
+                "resolvedNote": null,
+                "retiredNote": null,
+                "subtaskId": null,
+                "subtaskName": null,
+                "projectId": 240,
+                "userId": 1,
+                "user": "Admin",
+                "attachments": [],
+                "wasRisk": 0,
+                "createdAt": "1398-03-30",
+                "type": "issue"
+            }
+        ]
+    }
+```
+
+**Update**
+To update the issue {id} for project {projectId}.
+
+```php
+PUT api/projects/{projectId}/issues/{id}
+```
+The action payload validation is just like the store method.
+
+The success response would looks like:
+```php
+{
+    "data": [
+        {
+            "id": 9,
+            "title": "Updated title",
+            "description": "Some comment are here.",
+            "suggestion": "Some suggestions are here.",
+            "impactArea": "Schedule",
+            "impactAreaId": 1,
+            "status": "Opened",
+            "statusId": 1,
+            "priorityId": 2,
+            "priority": "Normal",
+            "timeToSolve": 21,
+            "notifyDate": "1398-03-30",
+            "occurrenceDate": "1398-03-30",
+            "openDate": "1398-03-30",
+            "resolvedDate": "",
+            "retiredDate": "",
+            "resolvedNote": null,
+            "retiredNote": null,
+            "subtaskId": null,
+            "subtaskName": null,
+            "projectId": 240,
+            "userId": 1,
+            "user": "Admin",
+            "attachments": [],
+            "wasRisk": 0,
+            "createdAt": "1398-03-30",
+            "type": "issue"
+        }
+    ]
+}
+```
+
+**Delete**
+To delete the issues {id} for project {projectId}.
+
+```php
+Delete api/projects/{projectId}/issues/{id}
+```
+
+It return the deleted risk.
+```php
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "Class Name",
+            "grade": 8,
+            "student_count": 0,
+            "year": {
+                "name": 1402
+            },
+            "school": {
+                "name": "School Name"
+            },
+            "subjects": [
+                {
+                    "name": "Subject Name",
+                    "en_name": "Subject english name",
+                    "pa_name": "Subject Pushto name",
+                    "customSubject": false
+                },
+                ...
+            ]
+ 
+        },
+        ...
+    ]
+}
+```
+
+
+
+## Student API
+This section contains the endpoints related to managing student information.
+
+**Index**
+Retrieve a list of students in a specific class.
+
+Request
+```php
+GET /classes/{classRoom}/students
+```
+
+Response
+The success response looks like:
+```php
+{
+"data": [
+    {
+        "id": 1,
+        "name": "John Doe",
+        "father_name": "James Doe",
+        "grand_father_name": "Robert Doe",
+        "nid_number": "123456789",
+        "base_number": 123456789
+    },
+...
+ 
+    ]
+}
+```
+
+**Show**
+Retrieve detailed information about a specific student in a class.
+
+Request:
+```php
+POST /classes/{classRoom}/students/{student}
+```
+Response:
+```php
+{
+    "id": 1,
+    "name": "Jane Smith",
+    "father_name": "David Smith",
+    "grand_father_name": "Michael Smith",
+    "nid_number": "987654321",
+    "base_number": 123456789
+}
+```
+
+
+**Store**
+Add a new student to a specific class.
+
+Request:
+```php
+POST /classes/{classRoom}/students
+```
+Response:
+```php
+{
+    'name' => 'new name',
+    'father_name' => 'new father name',
+    'grand_father_name' => 'new grand father name',
+    'nid_number' => new id,
+    'base_number' => new base_number,
+}
+```
+
+
+**Update**
+Update information for an existing student in a class.
+
+Request:
+```php
+PUT /classes/{classRoom}/students/{student}
+```
+
+Response:
+```php
+{
+    "name": "update name",
+    "father_name": "update father name",
+    "grand_father_name": "update grand father name",
+    "nid_number": "update nid number",
+    "base_number": "update base number"
+}
+```
+
+**Delete**
+Remove a student from a specific class.
+
+Request
+```php
+DELETE /classes/{classRoom}/student/{student}
+```
+
+Reaponse
+```php
+No content
+```
+
+## Subject API
+This documentation provides an overview of the API endpoints and actions for managing subjects within the API system.
+
+**Index**
+This endpoint allows you to retrieve the subjects associated with a specific class.
+
+Request:
+```php
+GET /api/classes/{classRoom}/subjects
+```
+
+Request Prameters
+>{notice} {classRoom}: The ID of the class for which you want to retrieve subjects.
+
+Response:
+```php
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "Math",
+            "en_name": "Math",
+            "pa_name": "Math",
+            "customSubject": false
+        },
+    ]
+}
+```
+
+**Store**
+This endpoint allows you to create a new subject and associate it with a class.
+
+Request:
+```php
+POST /api/classes/{classRoom}/subjects
+```
+
+Request Prameters:
+>{notice} {classRoom}: The ID of the class to which the subject will be added.
+>{notice} name: The name of the subject.
+>{notice} en_name: The English name of the subject.
+>{notice} pa_name: The Pashto name of the subject.
+
+Example Request:
+```php
+{
+    "name": "Science",
+    "en_name": "Science",
+    "pa_name": "Science"
+}
+```
+
+Response:
+```php
+{
+    "data": {
+        "id": 2,
+        "name": "Science",
+        "en_name": "Science",
+        "pa_name": "Science",
+        "customSubject": true
+    }
+}
+```
+
+Delete
+This endpoint allows you to delete a subject from a class.
+
+Request:
+```php
+DELETE /api/classes/{classRoom}/subjects/{subject}
+```
+
+Request Parameters
+>{notice} {classRoom}: The ID of the class from which the subject will be deleted.
+>{notice} {subject}: The ID of the subject to be deleted.
+
+Response
+
+```php
+No Content
+```
+
+## Attendance API
+This documentation provides an overview of the API endpoints and resources available for managing attendance data in a school management system.
+
+**Store**
+Create a new attendance record for a student.
+
+Request:
+```php
+POST /attendance
+```
+
+Request Prameters:
+```php
+student_id (integer, required): The ID of the student.
+present (boolean): Whether the student is present (default: true).
+absents (integer): Number of absents (default: 0).
+sickness (integer): Number of sickness-related absences (default: 0).
+leave (integer): Number of leave-related absences (default: 0).
+```
+
+Response:
+Returns the created attendance record in JSON format.
+
+>{notice} Success (Http 201 created)
+
+If validation fails, an error response with details will be returned.
+
+>{notice} Error (HTTP 422 Unprocessable Entity)
+
+
+**Update**
+Update an existing attendance record for a student.
+
+Request:
+```php
+PUT /attendances/{attendance}
+```
+
+Request Parameters
+>{notice}  attendance (integer, required): The ID of the attendance record to be updated.
+
+Example Request:
+```php
+{
+    "student_id": 1,
+    "present": true,
+    "absents": 2,
+    "sickness": 1,
+    "leave": 0
+}
+```
+
+Response:
+```php
+{
+    "student_id": 1,
+    "present": true,
+    "absents": 2,
+    "sickness": 1,
+    "leave": 0
+}
+```
