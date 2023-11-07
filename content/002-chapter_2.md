@@ -50,7 +50,8 @@ time to benefits relative to classic waterfall processes. I. Increase the qual-
 ity of the deliverables II. Provide better estimates while spending less time
 creating them III. Be more in control of the project schedule and state. The
 catalog Books form.
-![Agile 1](content/Agile.png)
+
+![Aqile 1](content/Agile.png)
 
 
 ### Requirement Engineering
