@@ -180,13 +180,6 @@ that will be given to the story point will be saved in these project.[5][Keular
 Navas, 1989]
 ![EER 2](content/Erdiagram.png)
 
-### EER Model Diagram
-The EER model includes all of the concepts introduced by the ER model.
-Additionally it includes the concepts of a subclass and superclass (Is-a),
-along with the concepts of specialization and generalization. Furthermore, it
-introduces the concept of a union type or category, which is used to represent
-a collection of objects that is the union of objects of different entity types.
-
 ### Use Case Diagram
 A use case diagram at its simplest is a representation of a users interaction
 with the system that shows the relationship between the user and the different
