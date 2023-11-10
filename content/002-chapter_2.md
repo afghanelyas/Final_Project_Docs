@@ -178,6 +178,7 @@ will be saves here. User Story Precedence : In this entity the precedence
 that will be given to a user story will be saved here. Point: All the number
 that will be given to the story point will be saved in these project.[5][Keular
 Navas, 1989]
+
 ![EER 2](content/Erdiagram.png)
 
 ### Use Case Diagram
