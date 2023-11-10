@@ -2,7 +2,5 @@
 
 
 Teachers across various institutions are currently utilizing a variety of platforms to create result sheets. The Ministry of Education has supplied an official Excel template for this purpose. Some private schools have adopted in-house web-based systems to manage school administration and generate student result sheets. However, a significant number of teachers continue to manually complete the entire result generation process.
-
 The objective of this study is to examine the feasibility of implementing an API-based platform that would allow teachers in both private and public schools to generate result sheets without the necessity of having an in-house system for their respective schools. Furthermore, the proposed investigation aimed to explore the better way of integrating this API-based solution with the existing systems currently in use.
-
 This API-based platform offers seamless integration with a variety of systems. It provides well-documented APIs that individuals and organizations can easily incorporate into their existing systems.
