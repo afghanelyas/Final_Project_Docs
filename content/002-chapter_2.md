@@ -99,43 +99,43 @@ In Software engineering and systems engineering, a functional requirement
 defines a function of a system or its component. A function is described as
 a set of inputs, the behavior, and outputs. Functional requirements may be
 calculations, technical details, data manipulation and processing and other
-specific functionality that define what a system is supposed to accomplish.
-* 1- Remove unnecessary packages form Laravel Project
-* 2- Application Authentication(Registeration, login, logout)
-* 3- Implement the activity log package for the all API request
-* 4- setupe the Posgress SQL in local. Create the Postman collectin
-* 5- Block user account after unusual logins
-* 6- User verification. User porfile
-* 7- Create class
-* 8- Create subject seeder
-* 9- Attach subjects to class seeder and factory
-* 10- Add the class to education. Score seeder
-* 11- Student seeder
-* 12- Class seeder and factory
-* 13- Subject seeder
-* 14- location agent
-* 15- disable the disposable emails
-* 16- Custom subject
-* 17- Education year
-* 18- Validate the student attendance according the education year data
-* 19- generate result sheet
-* 20- Generate Excel of result (package or tool)
-* 21- Pupulate the result form students
-* 22- Generate ordinatry number bassed on the calss
-* 23- Generate ordinary number based on the class
-* 24- Make the dynamic the result sheet (پارچه)
+ecific functionality that define what a system is supposed to accomplish.
+1.  Remove unnecessary packages form Laravel Project
+2.  Application Authentication(Registeration, login, logout)
+3.  Implement the activity log package for the all API request
+4.  setupe the Posgress SQL in local. Create the Postman collectin
+5.  Block user account after unusual logins
+6.  User verification. User porfile
+7.  Create class
+8.  Create subject seeder
+9.  Attach subjects to class seeder and factory
+10. Add the class to education. Score seeder
+11. Student seeder
+12. Class seeder and factory
+13. Subject seeder
+14. location agent
+15. disable the disposable emails
+16. Custom subject
+17. Education year
+18. Validate the student attendance according the education year data
+19. generate result sheet
+20. Generate Excel of result (package or tool)
+21. Pupulate the result form students
+22. Generate ordinatry number bassed on the calss
+23. Generate ordinary number based on the class
+24. Make the dynamic the result sheet (پارچه)   ### Non-functional Requirements of our project
 
-### Non-functional Requirements of our project
+
 Non-functional requirements of this system cover all the remaining require-
 ments which are not covered by the functional requirements[4]. They specify
 criteria that judge the operation of this system, rather than specific be-
 haviours, like: When user logged in, if again users accessing his/her account
 don’t need to login again. Non-functional requirements are: Configure the rutes files to merchant and API.
-* 1- Setup the sentry for error reporting.
-* 2- Localize the validation message and properties.
-* 3- User profile middleware.
-* 4- User suspension middleware.
-* 5- Class subject middleware.
+1. Setup the sentry for error reporting.
+2. Localize the validation message and properties.
+3. User profile middleware.
+4. User suspension middleware.
+5. Class subject middleware.
 
 ### System Modeling
 System modeling is the process of developing abstract models of a system,
