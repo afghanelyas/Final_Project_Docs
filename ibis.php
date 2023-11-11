@@ -25,7 +25,7 @@ return [
     'document' => [
         'format' => [210, 297],
         'margin_left' => 40,
-        'margin_right' => 20,
+        'margin_right' => 26,
         'margin_bottom' => 14,
         'margin_top' => 14,
         
