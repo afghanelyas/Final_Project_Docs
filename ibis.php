@@ -24,19 +24,20 @@ return [
      */
     'document' => [
         'format' => [210, 297],
-        'margin_left' => 20,
+        'margin_left' => 40,
         'margin_right' => 20,
         'margin_bottom' => 14,
         'margin_top' => 14,
+        
     ],
 
-    /**
-     * Table of Contents Levels
-     */
-    'toc_levels' => [
-        'H1' => 0,
-        'H2' => 1,
-    ],
+    // /**
+    //  * Table of Contents Levels
+    //  */
+    // 'toc_levels' => [
+    //     'H1' => 0,
+    //     'H2' => 1,
+    // ],
 
     /**
      * Cover photo position and dimensions
